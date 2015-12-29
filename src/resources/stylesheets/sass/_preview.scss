@@ -1,0 +1,53 @@
+.preview {
+    // -ms-overflow-y: auto;
+    // overflow-y: auto;
+    .oprate {
+        top: 200px;
+        right: 30px;
+        position: absolute;
+        font-size: 28px;
+        z-index: 101;
+        &.btn-group-vertical{
+            box-shadow: none;
+            a{
+                font-size: 16px;
+                padding:10px 15px;
+                width: 40px;
+                display: block;
+                &:hover{
+                    opacity: .6;
+                }
+            }
+        }
+    }
+
+    .post-wrapper{
+       padding-top:30px;
+       word-break: break-all;
+    }
+
+    ul.pagination {
+        @include ul-style;
+        height: 30px;
+        width: 43%;
+        top: 160px;
+        position: fixed;
+        display: none;
+
+        li {
+            @include li-style;
+            width: 50px;
+            padding: 10px;
+            background: #bbb;
+            z-index: 1000;
+        }
+        li.prev {
+            float: left;
+            left: 20px;
+        }
+        li.next {
+            float: right;
+            right: 20px;
+        }
+    }
+}

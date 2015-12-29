@@ -1,0 +1,43 @@
+<div class="${baseClass}" data-dojo-type="qfacex/dijit/container/BorderContainer" style="${style}" data-dojo-props="liveSplitters:false,gutters:false,name:'mainNode',region:'${region}'">
+	<div data-dojo-type="qfacex/dijit/container/ContentPane" data-dojo-props="region:'center',name:'centerNode'" class="top" style="height:60px;">
+		<h2>${title}</h2>
+		<p>${description}</p>
+		<ul>
+			<li >
+				<label> Blog Title</label>
+				<input type="text" name="title"  data-dojo-type="dijit/form/TextBox" placeHolder="Blog Title" class="BlogName" data-dojo-props="trim:true, propercase:true" />
+				<p>The name of your blog</p>
+			</li>
+			<li>
+				<label>Blog Description</label>
+				<textarea type="text" name="general[description]" placeHolder="description"></textarea>
+				<p>Describe what your blog is about</p>
+			</li>
+			<li>
+				<label for="email-address">Email Address</label>
+				<input id="email-address" class="ember-view ember-text-field" type="email" name="general[email-address]" value="liuxiaofang0716@gmail.com">
+				<p>Address to use for admin notifications</p>
+			</li>
+			<li>
+				<label for="postsPerPage">Posts per page</label>
+				<input id="postsPerPage" class="ember-view ember-text-field" type="number" name="general[postsPerPage]" value="6">
+				<p>How many posts should be displayed on each page</p>
+			</li>
+			<li>
+				<label for="permalinks">Dated Permalinks</label>
+				<input id="permalinks" class="checkbox" type="checkbox" name="general[permalinks]">
+				<label class="checkbox" for="permalinks"></label>
+				<p class="checkboxP">Include the date in your post URLs</p>
+			</li>
+			<li>
+				<label for="activeTheme">Theme</label>
+				<select id="activeTheme" class="ember-view ember-select" name="general[activeTheme]">
+					<option>主题一</option>
+					<option>主题二</option>
+					<option>主题三</option>
+					<p>Select a theme for your blog</p>
+				</select>
+			</li>
+		</ul>
+	</div>
+</div>

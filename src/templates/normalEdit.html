@@ -1,0 +1,39 @@
+<div class="${baseClass} page-content entry-container" data-dojo-type="qfacex/dijit/container/BorderContainer" style="width:100%;height:100%;" data-dojo-props="liveSplitters:false,gutters:false,name:'mainNode'">
+    <div class="centerLayout" data-dojo-type="qfacex/dijit/container/ContentPane" data-dojo-props="region:'top',name:'headerNode'">
+        <section class="box entry-title">
+            <strong>
+            <input class="ember-view ember-text-field" placeholder="Your Post Title" tabindex="1" type="text" data-dojo-attach-point="titleNode"></section>
+        </strong>
+    </div>
+    <div class="entry-content" data-dojo-type="qfacex/dijit/container/ContentPane" data-dojo-props="region:'center',name:'centerNode'">
+    </div>
+    <div class="entry-footer" data-dojo-type="qfacex/dijit/container/ContentPane" data-dojo-props="region:'bottom',name:'bottomNode'">
+        <div class="publish-bar-inner">
+            <section class="ember-view publish-bar-inner">
+                <div class="publish-bar-tags-icon">
+                    <label class="tag-label fa fa-tags" for="tags" title="Tags">
+                        <span class="hidden">${nls.tags}</span>
+                    </label>
+                </div>
+                <div class="publish-bar-tags">
+                    <div class="tags-wrapper tags">
+                    </div>
+                </div>
+                <div class="publish-bar-tags-input">
+                    <input type="hidden" class="tags-holder">
+                    <input class="blog-tags-input" type="text" data-dojo-attach-point="tagsNode">
+                </div>
+            </section>
+            <div class="publish-bar-actions">
+                <a class="btn btn-default backBtn" data-dojo-attach-point="backNode">${nlsCommon.back}</a>
+                <a class="btn btn-primary btn-sm" data-dojo-attach-point="saveNode">${nlsCommon.save}</a>
+                <div class="clearfix checkbox checkbox-primary share-micro">
+                    <label class="checkbox">
+                        <input name="share" type="checkbox" value="yes" data-dojo-attach-point="shareNode">
+                        <small>${nlsCommon.shareMicro}</small>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

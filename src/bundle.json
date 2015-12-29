@@ -1,0 +1,127 @@
+{
+    "vendor": "ihudao.com",
+    "feature": "contents",
+    "name": "Blog",
+    "version": "1.0.0",
+    "description": "The bundle for application and other services of blog function",
+
+    "activator": "Activator",
+
+    "dependencies": {
+        "services": [{
+            "alias": "blog_srv",
+            "serviceType": "Server",
+            "symbolicName": "system:utilhub.com:blog_srv"
+        }, {
+            "alias": "post_srv",
+            "serviceType": "Server",
+            "symbolicName": "system:utilhub.com:post_srv"
+        }, {
+            "alias": "masonry_ctrl",
+            "serviceType": "Control",
+            "symbolicName": "system:utilhub.com:masonry_ctrl"
+        }, {
+            "alias": "group_srv",
+            "serviceType": "Server",
+            "symbolicName": "system:utilhub.com:group_srv"
+        }, {
+            "alias": "tweet_srv",
+            "serviceType": "Server",
+            "symbolicName": "system:utilhub.com:tweet_srv"
+        }, {
+            "alias": "topNavbar_ctrl",
+            "serviceType": "Control",
+            "symbolicName": "system:utilhub.com:topNavbar_ctrl"
+        }, {
+            "alias": "postFrame_ctrl",
+            "serviceType": "Control",
+            "symbolicName": "system:utilhub.com:postFrame_ctrl"
+        }, {
+            "alias": "showdown_lib",
+            "serviceType": "Library",
+            "symbolicName": "system:utilhub.com:showdown_lib"
+        }, {
+            "alias": "comment_srv",
+            "serviceType": "Server",
+            "symbolicName": "system:utilhub.com:comment_srv"
+        }, {
+            "alias": "comment_ctrl",
+            "serviceType": "Control",
+            "symbolicName": "system:utilhub.com:comment_ctrl"
+        }, {
+            "alias": "markdown_lib",
+            "serviceType": "Library",
+            "symbolicName": "system:utilhub.com:markdown_lib"
+        }, {
+            "alias": "medium-editor_lib",
+            "serviceType": "Library",
+            "symbolicName": "system:utilhub.com:medium-editor_lib"
+        }, {
+            "alias": "medium-insert_lib",
+            "serviceType": "Library",
+            "symbolicName": "system:utilhub.com:medium-insert_lib"
+        }, {
+            "alias": "toMarkdown_lib",
+            "serviceType": "Library",
+            "symbolicName": "system:utilhub.com:toMarkdown_lib"
+        }, {
+            "alias": "codemirror_lib",
+            "serviceType": "Library",
+            "symbolicName": "system:utilhub.com:codemirror_lib"
+        }, {
+            "alias": "iReload_lib",
+            "serviceType": "Library",
+            "symbolicName": "system:utilhub.com:iReload_lib"
+        }, {
+            "alias": "iDrag_lib",
+            "serviceType": "Library",
+            "symbolicName": "system:utilhub.com:iDrag_lib"
+        }, {
+            "alias": "iPopPage_lib",
+            "serviceType": "Library",
+            "symbolicName": "system:utilhub.com:iPopPage_lib"
+        }, {
+            "alias": "favourite_srv",
+            "serviceType": "Server",
+            "symbolicName": "system:utilhub.com:favourite_srv"
+        }, {
+            "alias": "like_srv",
+            "serviceType": "Server",
+            "symbolicName": "system:utilhub.com:like_srv"
+        }],
+        "extraCssFiles": [
+            "resources/stylesheets/app.css"
+        ]
+    },
+
+    "exports": {
+        "modules": [
+            "App"
+        ],
+        "services": [{
+            "serviceType": "App",
+            "category": "contents",
+            "name": "blog",
+            "classModule": "App",
+            "initParams": {
+                "title": "Blog"
+            }
+        }, {
+            "serviceType": "Control",
+            "category": "contents",
+            "name": "blog_preview_ctrl",
+            "classModule": "./controls/Preview"
+        }]
+    },
+
+    "licenses": [{
+        "type": "Commercial",
+        "url": "http://www.hudaokeji.com/license101"
+    }, {
+        "type": "OEM",
+        "url": "http://www.hudaokeji.com/license201"
+    }],
+    "bugs": "http://bugs.utilhub.com/",
+    "keywords": ["ihudao", "community", "sns"],
+    "homepage": "http://www.utilhub.com"
+}

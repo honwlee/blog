@@ -1,0 +1,41 @@
+/**
+ *
+ * Copyright (c) 2015 Hudaokeji Inc.(http://www.hudaokeji.com)
+ *
+ * @Author: liwenfeng
+ * @Date: 2015/06/30
+ */
+define([
+    "qscript/lang/Class",
+    "utilhub/osgi/IBundleActivator",
+    "utilhub/osgi/BundleContext"
+], function(Class, IBundleActivator, BundleContext) {
+
+    var Activator = Class.declare({
+        "-parent-": Class,
+        "-interfaces-": [IBundleActivator],
+        "-protected-": {
+            "-fields-": {
+                "_": {}
+            },
+            "-methods-": {}
+        },
+        "-public-": {
+            "-attributes-": {},
+            "-methods-": {
+                "start": function( /*BundleContext*/ context) {
+                    //TODO
+                },
+
+                "stop": function( /*BundleContext*/ context) {
+                    //TODO
+                }
+
+            }
+        },
+        "-constructor-": {
+            "initialize": function() {}
+        }
+    });
+    return Activator;
+});

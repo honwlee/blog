@@ -1,0 +1,38 @@
+@import "compass";
+@import "variables";
+@import "mixins";
+
+
+.blog {
+    @import "ghost/ghost";
+    @import "base";
+    @import "layout";
+    @import "list";
+    @import "preview";
+    @import "discover";
+    .pop-content-wrap .content .form-group .control-label{
+        //slide page
+        text-align: right;
+    }
+    .pop-content-wrap .content .form-group .slider{
+        margin-right: 20px;
+    }
+}
+
+// .blogPreSetPop{
+//     a.close i{
+//         float: right;
+//         color: red;
+//         font-size: 16px;
+//     }
+//     ul li{
+//         margin-top:2px;
+//     }
+//     ul label{
+//         width: 70px;
+//         display: inline-block;
+//     }
+// }
+
+
+

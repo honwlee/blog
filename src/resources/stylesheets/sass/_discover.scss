@@ -1,0 +1,30 @@
+.list-group{
+    margin-bottom: 0;
+}
+.list-group-item {
+        border: none;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 1px;
+        .blogTitle{
+            width: 90%;
+            margin-top: 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .blogDesc{
+            max-height: 51px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        &:last-child {
+                border-bottom: none;
+        }
+        .btn {
+                margin: 1px;
+        }
+        em {
+                // color: $colorHover;
+                font-size: xx-small;
+        }
+}

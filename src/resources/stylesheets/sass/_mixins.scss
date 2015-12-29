@@ -1,0 +1,44 @@
+@mixin ul-style{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+@mixin li-style{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+@mixin proverb {
+    background: #fff;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5em;
+    color: $textColor;
+}
+
+@mixin top-bottom-color {
+    // background: #869396;
+    // background: #BAC2C4;
+    // background: rgba(113,173,217,.5);
+    // border-top:5px solid #aab4ff;
+    @include box-shadow(inset 0px -1px 0 #ccc);
+    background: rgba(0,0,0,.1);
+    background: transparent;
+}
+
+@mixin liHover {
+    color: #81817E;
+    &:hover {
+        color: #222;
+        cursor: pointer;
+    }
+}
+@mixin contentPosition {
+    width: 80%;
+    margin: 5px auto;
+    text-indent: 2em;
+}
+@mixin postTagI{
+    padding-right: 5px;
+    color: rgb(118, 73, 114);
+}

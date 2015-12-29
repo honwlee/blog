@@ -1,0 +1,182 @@
+.topLayout {
+    @include proverb;
+}
+.setting {
+    ul {
+        @include ul-style;
+        margin-left: 10px;
+
+        select {
+            width: 270px;
+            height: 30px;
+            line-height: 30px;
+        }
+        select .bgColor {
+            width: 20px;
+            height: 20px;
+            background: red;
+        }
+    }
+    li {
+        @include li-style;
+        margin-top: 10px;
+
+        input, textarea, select {
+            width: 280px;
+            padding: 5px 7px;
+            margin: 0;
+            outline: 0;
+            font-size: 1.1em;
+            line-height: 1.4em;
+            background: $containerBgColor;
+            border: #e3e1d5 1px solid;
+            @include border-radius(2px);
+            @include transition(border-color 0.15s ease-in-out);
+
+            &.checkbox {
+                width: auto;
+            }
+        }
+        label {
+            display: inline-block;
+            width: 120px;
+            font-weight: bold;
+            color: #aaa9a2;
+            text-align: right;
+            vertical-align: top;
+        }
+        label.checkbox {
+            position: relative;
+            width: auto;
+        }
+        p {
+            max-width: 400px;
+            color: #9e9d95;
+            font-size: 1em;
+            margin: 0 122px;
+            line-height: 25px;
+            cursor: pointer;
+        }
+        .checkboxP {
+            display: -webkit-inline-box;
+            margin: 0;
+        }
+        textarea {
+            max-width: 340px;
+            min-width: 250px;
+        }
+    }
+}
+.centerLayout {
+    .topList {
+        @include top-bottom-color;
+        overflow: hidden;
+
+        .search {
+            line-height: 28px;
+            margin: 0;
+        }
+    }
+    .centerList {
+        ul {
+            @include ul-style;
+        }
+        li {
+            @include li-style;
+            display: block;
+            padding: 10px;
+            border-bottom: 1px dashed #bfbfbf;
+            position: relative;
+            @include transition(background 0.3s, box-shadow 0.3s);
+
+            &:hover, &.active {
+                background: rgba(0, 0, 0, 0.02);
+                @include box-shadow(0px 2px 0 #ccc);
+            }
+            &.active {
+                // background: -webkit-linear-gradient(left, rgb(237, 236, 228), rgb(195, 201, 208));
+                // background: rgba(192, 192, 192, 0.5);
+            }
+            span {
+                color: rgb(105, 0, 7);
+                font-size: 12px;
+                margin: 0 10px;
+                line-height: $listLineHeight;
+
+                i {
+                    padding: 0 5px;
+                }
+                &.title {
+                    color: rgb(116, 87, 65);
+                    font-size: 13px;
+                    line-height: $listLineHeight;
+                    font-weight: bold;
+                    text-rendering: optimizeLegibility;
+                }
+                &.date {
+                    float: right;
+                }
+                &.tags {
+                    max-width: 200px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    color: $tagTranslateColor;
+                }
+            }
+        }
+    }
+    .bottomList {
+        @include top-bottom-color;
+        border: none;
+    }
+    
+    .entry-preview {
+        span.btn {
+            width: 50%;
+            // padding: 10px;
+            position: absolute;
+
+            &.origin-btn {
+                left: 0;
+            }
+            &.preview-btn {
+                right: 0;
+            }
+        }
+    }
+}
+.bottomLayout {
+    @include proverb;
+}
+ul.digestForm {
+    @include ul-style;
+    // background: antiquewhite;
+
+    li {
+        @include li-style;
+
+        span {
+            display: -webkit-inline-box;
+            color: #666;
+            font-size: 12px;
+            overflow: hidden;
+            margin: 0px 2%;
+            padding-top: 10px;
+        }
+        p {
+            overflow: hidden;
+            color: $textColor;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            max-width: 236px;
+        }
+        .textarea {
+            width: 96%;
+            margin: 0 2%;
+            // max-height: 80px;
+            min-height: 80px;
+            max-width: 380px;
+            outline-style: none;
+        }
+    }
+}

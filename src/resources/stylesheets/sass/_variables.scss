@@ -1,0 +1,8 @@
+$bgColor: rgb(237, 236, 228);
+$containerBgColor: #fff;
+$listLineHeight: 30px;
+$blogListBg: rgba(66, 170, 245, 0.9);
+$tagTranslateColor: rgb(201, 108, 5);
+$textColor: #444;
+$border-color:#EBEBEB;
+@mixin  wordEllipsis{word-wrap: normal;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}

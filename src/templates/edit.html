@@ -1,0 +1,46 @@
+<div class="${baseClass} page-content entry-container" data-dojo-type="qfacex/dijit/container/BorderContainer" style="${style}" data-dojo-props="liveSplitters:false,gutters:false,name:'mainNode',region:'${region}'">
+    <div class="box entry-title" data-dojo-type="qfacex/dijit/container/ContentPane" data-dojo-props="region:'top',name:'topNode'" style="height:50px;">
+        <input class="ember-view ember-text-field" placeholder="Your Post Title" tabindex="1" type="text" data-dojo-attach-point="blogTitleNode">
+    </div>
+    <div class="entry-markdown js-entry-markdown active col-sm-6" data-dojo-type="qfacex/dijit/container/TabContainer" data-dojo-props="region:'center',name:'centerNode'"></div>
+    <div class="entry-preview js-entry-preview col-sm-6" data-dojo-type="qfacex/dijit/container/ContentPane" data-dojo-props="region:'right'">
+        <header class="floatingheader ">
+            <span class="origin-btn col-sm-6" data-dojo-attach-point="originBtn">${nls.origin}</span>
+            <span class="preview-btn col-sm-6" data-dojo-attach-point="previewBtn">${nls.preview}</span>
+        </header>
+        <section class="entry-preview-content js-entry-preview-content">
+            <div data-dojo-attach-point="previewNode" class="ember-view rendered-markdown js-rendered-markdown"></div>
+        </section>
+    </div>
+    <div class="" data-dojo-type="qfacex/dijit/container/ContentPane" data-dojo-props="region:'bottom',name:'bottomNode'" style="width:100%;height:40px">
+        <footer class="publish-bar">
+            <div class="publish-bar-inner">
+                <section class="ember-view publish-bar-inner">
+                    <div class="publish-bar-tags-icon">
+                        <label class="tag-label fa fa-tags" for="tags" title="Tags">
+                            <span class="hidden">${nls.tags}</span>
+                        </label>
+                    </div>
+                    <div class="publish-bar-tags">
+                        <div class="tags-wrapper tags">
+                        </div>
+                    </div>
+                    <div class="publish-bar-tags-input">
+                        <input type="hidden" class="tags-holder">
+                        <input class="blog-tags-input" type="text" data-dojo-attach-point="tagsNode">
+                    </div>
+                </section>
+                <div class="publish-bar-actions">
+                    <a class="btn btn-default backBtn" data-dojo-attach-point="backNode">${nlsCommon.back}</a>
+                    <a class="btn btn-default" data-dojo-attach-point="saveNode">${nlsCommon.save}</a>
+                    <div class="clearfix checkbox checkbox-primary">
+                        <label class="checkbox">
+                            <input name="share" type="checkbox" value="yes" data-dojo-attach-point="shareNode">
+                            <small>${nlsCommon.shareMicro}</small>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>

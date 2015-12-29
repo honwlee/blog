@@ -1,0 +1,44 @@
+<div class="${baseClass}" style="${style}">
+    <div class="post-template" data-dojo-attach-point="centerNode">
+        <div data-dojo-attach-point="topPlaceNode"></div>
+        <div class="container-fluid">
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <article class="post-wrapper">
+                        <header class="post-header">
+                            <h1 class="post-title" data-dojo-attach-point="titleNode"></h1>
+                            <section class="post-meta" data-dojo-attach-point="postMetaNode">
+                            </section>
+                        </header>
+                        <section class="post-content" data-dojo-attach-point="contentNode"></section>
+                    </article>
+                    <div data-dojo-attach-point="commentZoneNode"> </div>
+                    <div class="article-opts-wrap">
+                        <ul class="article-opts-list nav nav-pills" data-dojo-attach-point="linksNode">
+                            <li class="link-item" data-dojo-attach-point="favouriteLinkNode" title="收藏">
+                                <a> <i class="fa fa-star-o"></i>
+                                    <span class="num" data-dojo-attach-point="favouriteCountNode">${likersCount}</span>
+                                </a>
+                            </li>
+                            <li class="link-item last-item" data-dojo-attach-point="likeLinkNode" title="赞">
+                                <a>
+                                    <i class="fa fa-thumbs-o-up"></i>
+                                    <span class="num" data-dojo-attach-point="likeCountNode">${favsCount}</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-dojo-attach-point="goTopNode" class="goTopButton"> <i class="${fontAwesome.goTop}"></i>
+    </div>
+    <div class="oprate btn-group-vertical" data-dojo-attach-point="oprateNode"></div>
+    <ul class="pagination" data-dojo-attach-point="paginationNode">
+        <li class="prev" data-dojo-attach-point="prevNode">${nls.prev}</li>
+        <li class="next" data-dojo-attach-point="nextNode">${nls.next}</li>
+    </ul>
+</div>

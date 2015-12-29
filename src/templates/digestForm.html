@@ -1,0 +1,14 @@
+<ul class="${mainClass}">
+	<li>
+		<!-- <p  data-dojo-attach-point="selectionNode" >${nls.title}</p> -->
+		<span>${nls.towards}<p  data-dojo-attach-point="selectionNode" ></p>${nls.comments}</span>
+		<!-- <textarea class="textarea"  data-dojo-type="qfacex/dijit/text/SimpleTextarea" data-dojo-props="name:'form-text'" style="width:300px;height:200px" ></textarea> -->
+	</li>
+	<li>
+		<textarea class="textarea"  data-dojo-type="qfacex/dijit/text/SimpleTextarea" data-dojo-props="name:'form-text'" ></textarea>
+	</li>
+	<li class="digestFormButton">
+		<a class="btn btn-default btnSave" data-dojo-attach-point="saveNode">${nls.save}</a>
+		<a class="btn btn-default " data-dojo-attach-point="cancelNode">${nls.cancel}</a>
+	</li>
+</ul>
