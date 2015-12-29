@@ -22,7 +22,6 @@ define([
                 nls: nlsApp,
                 templateString: template,
                 fontAwesome: FontAwesome,
-                hideClass: "hide",
                 postFrame: null,
                 postAvatar: runtime.currentUser.avatar,
                 isExpanded: null,
@@ -56,9 +55,7 @@ define([
 
                 eventBind: function() {
                     var self = this;
-                    on(this.commentLinkNode, "click", function() {
                         self.expand();
-                    });
                 },
 
                 initComments: function() {
@@ -128,36 +125,16 @@ define([
                 },
 
                 expand: function() {
-                    domClass.toggle(this.commentLinkNode, "curr");
-                    var animInClass = "zoomIn",
-                        self = this;
-                    var animOutClass = "zoomOut";
-                    var hideClass = this.hideClass;
-                    if (this.isExpanded) {
-                        // this.expandLinkNode.innerHTML = "展开";
-                        this.isExpanded = false;
-                        this.postFrame.inputNode.blur();
-                        // domClass.remove(this.contentNode, "content-expand");
-
-                        $(this.commentsWrapNode).removeClass(animInClass + ' animated').addClass(animOutClass + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
-                        $(this).addClass(hideClass);
-                        domStyle.set(this.commentsWrapNode, "display", "none");
+                    self = this;
+                    if (!this.isCommentInited) {
+                        domStyle.set(this.commentsWrapNode, "display", "block");
+                        this.initComments();
                     } else {
-                        if (!this.isCommentInited) {
-                            domStyle.set(this.commentsWrapNode, "display", "block");
-                            this.initComments();
-                        } else {
-                            domStyle.set(this.commentsWrapNode, "display", "block");
-                            var nD = parseInt((new Date()).format("yyyymmdd"));
-                            this.itemData.comments.forEach(function(comment) {
-                                var tD = parseInt((new Date(comment.updatedAt)).format("yyyymmdd"));
-                                // if (nD === tD) comment.commentObj.refresh();
-                                // self.addCommentRow(comment);
-                            });
-                        }
-                        // domClass.add(this.contentNode, "content-expand");
-                        $(this.commentsWrapNode).removeClass(hideClass).removeClass(animOutClass + ' animated').addClass(animInClass + ' animated');
-                        // this.expandLinkNode.innerHTML = "收起";
+                        domStyle.set(this.commentsWrapNode, "display", "block");
+                        var nD = parseInt((new Date()).format("yyyymmdd"));
+                        this.itemData.comments.forEach(function(comment) {
+                            var tD = parseInt((new Date(comment.updatedAt)).format("yyyymmdd"));
+                        });
                         this.isExpanded = true;
                         this.postFrame.inputNode.focus();
                     }

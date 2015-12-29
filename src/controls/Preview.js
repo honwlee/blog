@@ -333,7 +333,7 @@ define([
 
                         var postMeta = "";
                         if (data.author) {
-                            postMeta += "Written by " + data.author;
+                            postMeta += nlsApp.writtenBy + data.author;
                         }
 
                         if (data.createDate) {

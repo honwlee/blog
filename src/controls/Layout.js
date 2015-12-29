@@ -182,7 +182,8 @@ define([
                             iconClass: this.fontAwesome.post,
                             hidden: true,
                             opts: {
-                                actions: ["translate", "edit", "normalEdit", "delete"]
+                                // actions: ["translate", "edit", "normalEdit", "delete"]
+                                actions: ["edit", "delete"]
                             },
                             container: this.centerNode,
                             callback: "initPageData"
