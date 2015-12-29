@@ -41,16 +41,27 @@
                     <input class="blog-tags-input" type="text" data-dojo-attach-point="tagsNode">
                 </div>
             </section>
+             <div class="dropup">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    权限设置
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">public</a></li>
+                    <li><a href="#">private</a></li>
+                </ul>
+            </div>
             <div class="publish-bar-actions">
                 <a class="btn btn-default backBtn" data-dojo-attach-point="backNode">${nlsCommon.back}</a>
-                <a class="btn btn-primary dropdown-toggle" data-dojo-attach-point="saveNode" >${nlsCommon.save}</a>
-               <div class="clearfix checkbox checkbox-primary">
-                <label class="checkbox" >
-                    <input name="share" type="checkbox" value="yes" data-dojo-attach-point="shareNode">
-                    <small>${nlsCommon.shareMicro}</small>
-                </label>
+                <a class="btn btn-primary dropdown-toggle" data-dojo-attach-point="saveNode">${nlsCommon.save}</a>
+                <div class="clearfix checkbox checkbox-primary">
+                    <label class="checkbox">
+                        <input name="share" type="checkbox" value="yes" data-dojo-attach-point="shareNode">
+                        <small>${nlsCommon.shareMicro}</small>
+                    </label>
+                </div>
             </div>
-            </div>
+           
         </div>
     </footer>
 </div>

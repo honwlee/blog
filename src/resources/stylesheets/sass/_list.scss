@@ -1,17 +1,20 @@
 .list-preview-wrap {
     border-left: 1px solid $border-color;
 }
+
 .pop-content-wrap,
-.list-preview-header{
-    .btn-group{
+.list-preview-header {
+    .btn-group {
         box-shadow: none;
         margin: 10px 1px 0;
     }
-    .btn{
-            border: none;
+    .btn {
+        border: none;
     }
 }
-.list-header, .list-preview-header {
+
+.list-header,
+.list-preview-header {
     border-bottom: 1px solid $border-color;
     padding: 0 10px;
     position: absolute;
@@ -20,13 +23,16 @@
     right: 0;
     height: 50px;
 }
+
 .span-all-post {
     line-height: 48px;
     font-size: 1.2em;
     font-weight: 500;
     color: $textColor;
 }
-.post-list-wrap, .list-preview-section {
+
+.post-list-wrap,
+.list-preview-section {
     position: absolute;
     top: 50px;
     left: 0;
@@ -34,6 +40,7 @@
     bottom: 0;
     overflow-y: auto;
 }
+
 .list-preview-section {
     .post-template {
         position: relative;
@@ -45,31 +52,34 @@
         }
     }
 }
+
 .post-published-by {
     font-size: 12px;
     color: #999;
 }
+
 .list-preview-content {
     // padding-top: 20px;
     word-break: break-all;
 }
-$bgHoverActive: #eee;
 
+$bgHoverActive: #eee;
 .posts-list {
     list-style: none;
-
+    .active {
+        @include box-shadow(inset 5px 0 0 0 #dfd4d4);
+        background: $bgHoverActive;
+    }
     .post-item {
         padding: 10px 20px;
         border-bottom: 1px solid $border-color;
-        &.active {
-            @include box-shadow(inset 5px 0 0 0 #dfd4d4);
-        }
         &:hover {
             background: $bgHoverActive;
         }
-        .post-title {
+        &:active {
+            background: $bgHoverActive;
         }
-        .post-publised {
-        }
+        .post-title {}
+        .post-publised {}
     }
 }
