@@ -188,7 +188,7 @@ define([
                             callback: "initPageData"
                         },
                         slide: {
-                            name: "slide",
+                            name: nlsApp.slide,
                             "objClass": Slide,
                             iconClass: this.fontAwesome.slide,
                             hidden: false,

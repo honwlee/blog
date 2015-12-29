@@ -49,5 +49,7 @@ define({
        dataRotate:"Data-Rotate",
        dataRotateX:"Data-Rotate-X",
        dataRotateY:"Data-Rotate-Y",
-       dataRotateZ:"Data-Rotate-Z"
+       dataRotateZ:"Data-Rotate-Z",
+       slide:"Slide",
+       yourPostTitle:"Your Post Title:"
 });

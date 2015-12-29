@@ -38,14 +38,16 @@ define({
     preview: "預覽",
     setting: "設定",
     written: "編輯日期",
-    fontFamily:"字體樣式",
-       fontSize:"字體大小",
-       dataX:"橫向展示設置",
-       dataY:"縱向展示設置",
-       dataZ:"深向展示設置",
-       dataScale:"縮放展示設置",
-       dataRotate:"旋轉展示設置",
-       dataRotateX:"橫向旋轉展示設置",
-       dataRotateY:"縱向旋轉展示設置",
-       dataRotateZ:"深向旋轉展示設置"
-})
+    fontFamily: "字體樣式",
+    fontSize: "字體大小",
+    dataX: "橫向展示設置",
+    dataY: "縱向展示設置",
+    dataZ: "深向展示設置",
+    dataScale: "縮放展示設置",
+    dataRotate: "旋轉展示設置",
+    dataRotateX: "橫向旋轉展示設置",
+    dataRotateY: "縱向旋轉展示設置",
+    dataRotateZ: "深向旋轉展示設置",
+    slide: "幻燈片",
+    yourPostTitle:"請輸入標題"
+});

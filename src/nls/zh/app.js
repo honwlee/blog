@@ -49,5 +49,7 @@ define({
        dataRotate:"旋转展示设置",
        dataRotateX:"横向旋转展示设置",
        dataRotateY:"纵向旋转展示设置",
-       dataRotateZ:"深向旋转展示设置"
+       dataRotateZ:"深向旋转展示设置",
+       slide:"幻灯片",
+       yourPostTitle:"请输入标题"
 });
