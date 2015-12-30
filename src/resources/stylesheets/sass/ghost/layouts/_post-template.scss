@@ -25,56 +25,6 @@
     right: 0;
     overflow-y: auto;
 
-
-
-
-    p, ul, ol, dl {
-        -webkit-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
-        -moz-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
-        -o-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
-        margin: 0 0 1.75em 0;
-    }
-
-    ol ol, ul ul,
-    ul ol, ol ul {
-        margin: 0 0 0.4em 0;
-        padding-left: 2em;
-    }
-
-    dl dt {
-        float: left;
-        width: 180px;
-        overflow: hidden;
-        clear: left;
-        text-align: right;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        font-weight: 700;
-        margin-bottom: 1em;
-    }
-
-    dl dd {
-        margin-left: 200px;
-        margin-bottom: 1em
-    }
-
-    li {
-        margin: 0.4em 0;
-    }
-
-    li li {
-        margin: 0;
-    }
-
-    hr {
-        display: block;
-        height: 1px;
-        border: 0;
-        border-top: #EFEFEF 1px solid;
-        margin: 3.2em 0;
-        padding: 0;
-    }
-
     blockquote {
         -moz-box-sizing: border-box;
         box-sizing: border-box;
@@ -255,7 +205,7 @@
 }
 
 .post-template .post-header {
-   margin-bottom: 3.4rem;
+   // margin-bottom: 3.4rem;
 }
 
 .post-template .post-title {
@@ -277,6 +227,7 @@
    imperfections with browser width % calculations and rounding */
 .post-template .content {
     overflow: hidden;
+    margin-bottom: 0;
 }
 
 .post {
