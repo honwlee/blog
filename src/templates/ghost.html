@@ -42,13 +42,13 @@
                 </div>
             </section>
              <div class="dropup">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    权限设置
+                <button class="btn btn-default dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span data-dojo-attach-point="statusNode">${nls.publicStatus}</span>
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li><a href="#">public</a></li>
-                    <li><a href="#">private</a></li>
+                    <li data-dojo-attach-point="publicNode"><a>${nls.publicStatus}</a></li>
+                    <li data-dojo-attach-point="privateNode"><a>${nls.privateStatus}</a></li>
                 </ul>
             </div>
             <div class="publish-bar-actions">
@@ -61,7 +61,7 @@
                     </label>
                 </div>
             </div>
-           
+
         </div>
     </footer>
 </div>

@@ -325,6 +325,12 @@ define([
                     }
                 },
 
+                status: {
+                    setter: function(status){
+                        this._.status = status;
+                    }
+                },
+
                 isEdit: {
                     type: Boolean,
                     setter: function(isEdit) {
@@ -450,6 +456,18 @@ define([
                             self.showPreview();
                         }));
                     }
+                    on(this.publicNode,"click",function(){
+                        self.statusNode.innerHTML = this.firstChild.innerHTML;
+                        domClass.add(this,"active");
+                        domClass.remove(self.privateNode,"active");
+                        self.status = "public";
+                    });
+                    on(this.privateNode,"click",function(){
+                        self.statusNode.innerHTML = this.firstChild.innerHTML;
+                        self.status = "private";
+                        domClass.add(this,"active");
+                        domClass.remove(self.publicNode,"active");
+                    });
                 },
 
                 savePost: function() {
@@ -466,6 +484,7 @@ define([
                         "markdown": this.markdown,
                         "html": this.html,
                         "blog_id": this.blogId,
+                        "status": this.status,
                         "tagString": this.tagsValue.trim()
                     };
                     var photoIds = this.photos.map(function(photo) {

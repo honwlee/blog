@@ -104,6 +104,7 @@ define([
                             iconClass: this.fontAwesome.blogAdd,
                             hidden: false,
                             opts: {},
+                            alwaysRefresh: true,
                             editing: true,
                             container: this.centerNode,
                             callback: "contentCbk"

@@ -170,8 +170,8 @@ define([
                         comments: comments
                     });
                     self.itemData = params.itemData;
+                    self.init();
                 });
-                this.init();
             }
         }
     });

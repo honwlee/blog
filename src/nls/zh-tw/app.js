@@ -49,5 +49,7 @@ define({
     dataRotateY: "縱向旋轉展示設置",
     dataRotateZ: "深向旋轉展示設置",
     slide: "幻燈片",
-    yourPostTitle:"請輸入標題"
+    yourPostTitle:"請輸入標題",
+    publicStatus: "公開",
+    privateStatus: "私有"
 });
