@@ -601,6 +601,10 @@ body.zen {
     background: #1da7ee !important;
     color: #ffffff;
     border: 1px solid #0073bb;
+    width: 50px;
+    height: 28px;
+    margin-top: 10px;
+    text-align: center;
 }
 
 .publish-bar-tags-icon {
@@ -664,11 +668,21 @@ body.zen {
         }
     }
     .dropdown-menu {
+        width: 50px;
+        min-width: 50px;
+        .active {
+            a {
+                background-color: #ccc;
+                color: #333;
+            }
+        }
         li {
-            text-align: center;
-            width: 80px;
+            width: 50px;
             &:hover {
                 background-color: #ACC1CC;
+            }
+            a {
+                padding: 3px 8px;
             }
         }
     }
