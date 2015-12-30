@@ -41,16 +41,6 @@
                     <input class="blog-tags-input" type="text" data-dojo-attach-point="tagsNode">
                 </div>
             </section>
-             <div class="dropup">
-                <button class="btn btn-default dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    <span data-dojo-attach-point="statusNode">${nls.publicStatus}</span>
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li data-dojo-attach-point="publicNode"><a>${nls.publicStatus}</a></li>
-                    <li data-dojo-attach-point="privateNode"><a>${nls.privateStatus}</a></li>
-                </ul>
-            </div>
             <div class="publish-bar-actions">
                 <a class="btn btn-default backBtn" data-dojo-attach-point="backNode">${nlsCommon.back}</a>
                 <a class="btn btn-primary dropdown-toggle" data-dojo-attach-point="saveNode">${nlsCommon.save}</a>
@@ -61,7 +51,16 @@
                     </label>
                 </div>
             </div>
-
+            <div class="dropup">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span data-dojo-attach-point="statusNode">${nls.publicStatus}</span>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li data-dojo-attach-point="publicNode"><a>${nls.publicStatus}</a></li>
+                    <li data-dojo-attach-point="privateNode"><a>${nls.privateStatus}</a></li>
+                </ul>
+            </div>
         </div>
     </footer>
 </div>

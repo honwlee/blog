@@ -648,14 +648,27 @@ body.zen {
 }
 
 .dropup {
-    background: #337ab7;
-    border-radius: 4px;
-    width: 70px;
+    background: #E88012;
+    border-radius: 2px;
+    right: 60px;
+    width: 50px;
+    height: 28px;
+    margin-bottom: 7px;
+    button {
+        width: 50px;
+        height: 28px;
+        margin-top: 0px;
+        span {
+            color: #fff;
+            font-size: 12px;
+        }
+    }
     .dropdown-menu {
         li {
             text-align: center;
+            width: 80px;
             &:hover {
-                background-color:#ACC1CC;
+                background-color: #ACC1CC;
             }
         }
     }
@@ -669,19 +682,20 @@ body.zen {
     text-align: right;
     color: #000;
     .btn {
-        right: 30px;
+        right: 90px;
         margin-top: 5px;
         // margin-bottom: 0;
         padding: 5px;
         width: 50px;
     }
     .backBtn {
-        right: 40px;
+        right: 110px;
     }
     .checkbox {
         float: left;
         margin: 0;
         padding: 4px 0 5px 10px;
+        right: 20px;
     }
 }
 
