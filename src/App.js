@@ -3,9 +3,8 @@ define([
     "bundle!dependencies/services/blog_srv",
     "bundle!dependencies/services/group_srv",
     "i18n!utilhub/front/system/nls/apps",
-    "./controls/HomeLayout",
     "./controls/Layout"
-], function(_App, blogSrv, groupSrv, nlsApps, HomeLayout, Layout) {
+], function(_App, blogSrv, groupSrv, nlsApps, Layout) {
     return Class.declare({
         "-parent-": _App,
         "-module-": "apps/Blog/App",
@@ -28,15 +27,6 @@ define([
                             app: this
                         };
                     Function.mixin(obj, args || {});
-                    // if (args.isHomeScene) {
-                    //     blogSrv.init().then(function(memory) {
-                    //         obj.blog = blogSrv.query({
-                    //             userId: runtime.currentUserId
-                    //         })[0];
-                    //         self.mainLayout = new HomeLayout(obj);
-                    //         self.deferred.resolve();
-                    //     });
-                    // } else {
                     if (args.groupId) {
                         groupSrv.initBlog(args.groupId).then(function(blog) {
                             obj.blog = blog;
@@ -52,7 +42,6 @@ define([
                             self.deferred.resolve();
                         });
                     }
-                    // }
                     return this.deferred.promise;
                 },
 

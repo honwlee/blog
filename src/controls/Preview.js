@@ -13,23 +13,22 @@ define([
     "qscript/lang/String",
     "qfacex/dijit/ITemplated",
     "utilhub/ItemsControl",
-    "bundle!dependencies/services/medium-insert_lib#module",
+    "utilhub/front/comctrls/IGoTop",
     "text!../templates/preview.html",
-    "text!../templates/digest.html",
     "i18n!../nls/app",
-    "./DigestForm",
     "./ViewSetting",
     "./IActions",
+    "./IDigest",
     "./Comment",
     "dijit/TooltipDialog",
     "bundle!dependencies/services/like_srv",
     "bundle!dependencies/services/favourite_srv"
 ], function(on, dom, topic, focusUtil, popup, domClass, event, domStyle, domGeom, domConstruct, Class,
-    qString, ITemplated, ItemsControl, MediumInsert, template, digestItem, nlsApp,
-    DigestForm, ViewSetting, IActions, Comment, TooltipDialog, likeSrv, favouriteSrv) {
+    qString, ITemplated, ItemsControl, IGoTop, template, nlsApp,
+    ViewSetting, IActions, IDigest, Comment, TooltipDialog, likeSrv, favouriteSrv) {
     var Preview = Class.declare({
         "-parent-": ItemsControl,
-        "-interfaces-": [ITemplated, IActions],
+        "-interfaces-": [ITemplated, IActions, IDigest, IGoTop],
         "-protected-": {
             "-fields-": {
                 templateString: template,
@@ -38,18 +37,9 @@ define([
                 hasSetting: false,
                 mainLayout: null,
                 nls: nlsApp,
-                blogData: null,
+                postData: null,
                 intervalTime: null,
                 lastTime: null
-            },
-
-            "-handlers-": {
-                /* centerNode_mouseUp: function() {
-                    // dom.setSelectable(dom.byId(this.centerNode), true);
-                    // focusUtil.focus(dom.byId(this.centerNode.id));
-                    var html = this.getSelectionHtml();
-                    if (html) this.createDigestTooltip(html, e);
-                }*/
             },
 
             "-methods-": {
@@ -79,7 +69,7 @@ define([
                     on(this.centerNode, "click", Function.hitch(this, "closeViewSetting"));
 
                     var comment = new Comment({
-                        itemData: self.blogData
+                        itemData: self.postData
                     });
                     self.commentZoneNode.appendChild(comment.domNode);
                     on(this.likeLinkNode, "click", function() {
@@ -111,7 +101,6 @@ define([
                         }
                     });
 
-
                     on(this.favouriteLinkNode, "click", function() {
                         if (self.isFavourited && self.intervalTime > 1000) {
                             favouriteSrv.unFavourite({
@@ -139,127 +128,6 @@ define([
                     });
                 },
 
-                initSideComments: function() {
-                    var currentUser = runtime.currentUser,
-                        user = {
-                            id: currentUser.id,
-                            name: currentUser.username,
-                            avatarUrl: currentUser.avatar
-                        },
-                        comments = [{
-                            "sectionId": "1",
-                            "comments": [{
-                                "authorAvatarUrl": "http://f.cl.ly/items/1W303Y360b260u3v1P0T/jon_snow_small.png",
-                                "authorName": "Jon Sno",
-                                "comment": "I'm Ned Stark's bastard. Related: I know nothing."
-                            }, {
-                                "authorAvatarUrl": "http://f.cl.ly/items/2o1a3d2f051L0V0q1p19/donald_draper.png",
-                                "authorName": "Donald Draper",
-                                "comment": "I need a scotch."
-                            }]
-                        }, {
-                            "sectionId": "3",
-                            "comments": [{
-                                "authorAvatarUrl": "http://f.cl.ly/items/0l1j230k080S0N1P0M3e/clay-davis.png",
-                                "authorName": "Senator Clay Davis",
-                                "comment": "These Side Comments are incredible. Sssshhhiiiiieeeee."
-                            }]
-                        }];
-                    this.sideComments = new SideComments(this.contentNode, user, comments);
-                },
-
-                createDigestTooltip: function(html, e) {
-                    var self = this,
-                        cNode = e.target,
-                        span = domConstruct.create("span", {
-                            "class": "digestSpan",
-                            innerHTML: "...",
-                            style: "border:1px solid #ccc;",
-                            offsetY: e.y,
-                            offsetX: e.x
-                        }),
-                        cDialog = new TooltipDialog({
-                            style: "background:#ccc;",
-                            onMouseLeave: function() {
-                                popup.close(cDialog);
-                            }
-                        }),
-                        spanDialog = new TooltipDialog({
-                            style: "background:#ccc;",
-                            onMouseLeave: function() {
-                                popup.close(spanDialog);
-                            }
-                        });
-
-                    on(span, 'mouseover', function() {
-                        popup.open({
-                            popup: spanDialog,
-                            around: span
-                        });
-                    });
-
-                    var content = html.innerHTML ? html.outerText : html;
-                    if (!content || content.innerHTML === "") return;
-                    var a = domConstruct.create("a", {
-                        // innerHTML: "Add Notes",
-                        style: "border:1px solid #ccc;cursor: pointer;text-decoration: none;outline-style: none;",
-                        "class": "addNotes " + FontAwesome.addNotes,
-                        // "class": "addNotes" + FontAwesome.addNotes,
-                        onclick: function() {
-                            var itemDom = self.createDigestForm(content);
-                            domConstruct.place(span, cNode, "first");
-                            spanDialog.set("content", itemDom);
-                        }
-                    });
-
-                    popup.open({
-                        popup: cDialog,
-                        around: cNode
-                    });
-                    cDialog.set("content", a);
-                },
-
-                createDigestForm: function(content) {
-                    var digestForm = new DigestForm({
-                        title: "Create Digest",
-                        mainLayout: this.mainLayout
-                    });
-                    digestForm.digestData = {
-                        text: content
-                    };
-                    this.mainLayout.popup(digestForm);
-                    return digestForm.itemDom;
-                },
-
-                getSelectionHtml: function() {
-                    var html;
-                    if (typeof window.getSelection != "undefined") {
-                        var sel = window.getSelection();
-                        if (sel.rangeCount) {
-                            var container = domConstruct.create("div");
-                            for (var i = 0, len = sel.rangeCount; i < len; ++i) {
-                                container.appendChild(sel.getRangeAt(i).cloneContents());
-                            }
-                            html = container;
-                        }
-                    } else if (typeof document.selection != "undefined") {
-                        if (document.selection.type == "Text") {
-                            html = document.selection.createRange().htmlText;
-                        }
-                    }
-                    return html;
-                },
-
-                autoScroll: function(node) {
-                    if (node) {
-                        dojox.fx.smoothScroll({
-                            node: node,
-                            win: this.centerNode,
-                            duration: 300
-                        }).play();
-                    }
-                },
-
                 createTagsSpan: function(tags, container) {
                     container.innerHTML = "";
                     tags.forEach(Function.hitch(this, function(tag) {
@@ -283,7 +151,7 @@ define([
             "-attributes-": {
                 actions: {
                     writable: true,
-                    "default": ["translate", "edit", "normalEdit", "preview"],
+                    "default": ["translate", "edit", "preview"],
                     setter: function(actions) {
                         var _ = this._;
                         _.actions = actions ? actions : this.actions;
@@ -361,31 +229,9 @@ define([
                 start: function() {
                     var self = this;
                     this.createViewSetting();
-                    on(this.centerNode, "scroll", function() {
-                        var scrollTop = self.centerNode.scrollTop;
-                        var scrollLeft = self.centerNode.scrollLeft;
 
-                        //show or display the "go to top" button
-                        if (scrollTop > 200) {
-                            domStyle.set(self.goTopNode, {
-                                display: "block"
-                            });
-                        } else {
-                            domStyle.set(self.goTopNode, {
-                                display: "none"
-                            });
-                        }
-                    });
-                    // new MediumInsert({
-                    //     selector: this.contentNode,
-                    //     uploadUrl: this.uploadUrl,
-                    //     deleteUrl: "/ucenter/api/v1/posts/" + this.itemData.id + "/photos?private_token=" + runtime.currentUser.token
-                    // });
-                    on(this.goTopNode, "click", function() {
-                        domStyle.set(self.goTopNode, {
-                            display: "none"
-                        });
-                        self.autoScroll(self.topPlaceNode);
+                    this.initGoTop({
+                        scrollContainer: this.centerNode
                     });
 
                     on(this.prevNode, "click", function() {
@@ -395,12 +241,6 @@ define([
                     on(this.nextNode, "click", function() {
                         self.mainLayout.selectItem(self.itemData.index + 1);
                     });
-
-                    // on(this.contentNode, "mouseup", function(e) {
-                    //     var html = self.getSelectionHtml();
-                    //     if (html) self.createDigestTooltip(html, e);
-                    // });
-
                 },
 
                 updateContent: function(content) {
@@ -444,11 +284,11 @@ define([
 
         "-constructor-": {
             initialize: function(params, srcNodeRef) {
-                this.blogData = params.blogData;
-                this.likersCount = params.blogData.likersCount;
-                this.favsCount = params.blogData.favsCount;
-                this.isLiked = params.blogData.liked;
-                this.isFavourited = params.blogData.favourited;
+                this.postData = params.postData;
+                this.likersCount = params.postData.likersCount;
+                this.favsCount = params.postData.favsCount;
+                this.isLiked = params.postData.liked;
+                this.isFavourited = params.postData.favourited;
                 this.overrided(params, srcNodeRef);
                 this.init();
             }

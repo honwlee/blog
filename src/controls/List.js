@@ -10,6 +10,7 @@ define([
     "qscript/lang/Class",
     "qfacex/dijit/ITemplated",
     "utilhub/ItemsControl",
+    "utilhub/front/comctrls/IGoTop",
     "./IActions",
     "./SlideConfig",
     "bundle!dependencies/services/blog_srv",
@@ -17,17 +18,16 @@ define([
     "text!../templates/list.html",
     "text!../templates/simpleListItem.html",
     "i18n!../nls/app"
-], function(on, query, topic, stringUtil, domClass, domStyle, domConstruct, qString, Class,
-    ITemplated, ItemsControl, IActions, SlideConfig, blogSrv, postSrv, template, simpleListItem, nlsApp) {
+], function(on, query, topic, stringUtil, domClass, domStyle, domConstruct, qString, Class, ITemplated,
+    ItemsControl, IGoTop, IActions, SlideConfig, blogSrv, postSrv, template, simpleListItem, nlsApp) {
     var List = Class.declare({
         "-parent-": ItemsControl,
-        "-interfaces-": [ITemplated, IActions],
+        "-interfaces-": [ITemplated, IActions, IGoTop],
         "-protected-": {
             "-fields-": {
                 nls: nlsApp,
                 templateString: template,
                 baseClass: "list",
-                blogData: null,
                 postMemory: null,
                 fontAwesome: FontAwesome,
                 actions: ["delete", "translate", "edit", "normalEdit", "preview"],
@@ -85,9 +85,8 @@ define([
                                 } else if (action === "slide") {
                                     self.addToSlide(self.currentItem.data);
                                 } else {
-                                    Function.mixin(self.blogData, self.currentItem.data);
                                     self.mainLayout.selectPage(action, {
-                                        blogData: self.blogData
+                                        postData: self.currentItem.data
                                     });
                                 }
                             }
@@ -244,6 +243,12 @@ define([
             },
 
             "-methods-": {
+                start: function(){
+                    this.initGoTop({
+                        scrollContainer: this.previewNode
+                    });
+                },
+
                 addToSlide: function(data) {
                     var self = this,
                         config = new SlideConfig({
@@ -282,9 +287,8 @@ define([
         "-constructor-": {
             initialize: function(params, srcNodeRef) {
                 this.overrided(params, srcNodeRef);
-                var self = this,
-                    blogId = this.blogData.id;
-                blogSrv.posts(blogId).then(function(memory) {
+                var self = this;
+                blogSrv.posts(params.blogId).then(function(memory) {
                     self.postMemory = memory;
                     self.init();
                 });

@@ -37,7 +37,6 @@ define([
                 "$$contentTemplate": template,
                 nls: nlsApp,
                 baseClass: "blog",
-                blog: null,
                 fontAwesome: FontAwesome,
                 _topicHubName: "blog",
                 app: null,
@@ -52,16 +51,8 @@ define([
                     this.overrided();
                     this.popPage = this.initPopPage(true);
                     this.domNode.appendChild(this.popPage.domNode);
-                    // if (this.withoutNav) {
-                    //     var list = this.list = new ItemsList({
-                    //         mainLayout: this
-                    //     });
-                    //     list.region = "center";
-                    //     this.centerNode.addChild(list);
-                    // } else {
                     this.initTopics();
                     this.initNav();
-                    // }
                 },
 
                 initTopics: function() {
@@ -93,7 +84,7 @@ define([
                             opts: {
                                 // actions: ["delete", "translate", "edit", "normalEdit", "dojoEdit", "preview", "slide"],
                                 actions: ["delete", "edit", "preview", "slide"],
-                                blogData: this.blog
+                                blogId: this.blog.id
                             },
                             container: this.centerNode,
                             callback: "listCbk"
@@ -211,7 +202,7 @@ define([
 
                     this.nav = new LeftNavbar({
                         navItemsData: this.navItemsData,
-                        hostSearch: true,
+                        hostSearch: false,
                         host: this
                     });
                     this.selectPage("list");
@@ -230,6 +221,12 @@ define([
                 memory: {
                     setter: function(memory) {
                         this._.memory = memory;
+                    }
+                },
+
+                blog: {
+                    setter: function(blog){
+                        this._.blog = blog;
                     }
                 },
 
@@ -313,6 +310,7 @@ define([
                 },
                 listCbk: function(pages, name) {
                     this.list = pages[name].page;
+                    this.list.start();
                 },
 
                 contentCbk: function(pages, name) {

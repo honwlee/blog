@@ -23,7 +23,7 @@ define([
                             if (yes) {
                                 var postId = itemData.id,
                                     self = this;
-                                blogsrv.deletePost(postId).then(function(configData) {
+                                blogsrv.deletePost(itemData.blogId, postId).then(function(configData) {
                                     toastr.success(nls.deleteSuccessful);
                                     self.mainLayout.selectPage("list");
                                     self.mainLayout.refreshList();
