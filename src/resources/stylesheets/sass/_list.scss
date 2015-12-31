@@ -73,6 +73,12 @@ $bgHoverActive: #eee;
     .post-item {
         padding: 10px 20px;
         border-bottom: 1px solid $border-color;
+        .title {
+            word-wrap: normal;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
         &:hover {
             background: $bgHoverActive;
         }

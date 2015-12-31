@@ -1611,85 +1611,82 @@ body.right-outlet-expanded .blog .right-outlet {
   background: #1da7ee !important;
   color: #ffffff;
   border: 1px solid #0073bb;
-  width: 50px;
   height: 28px;
-  margin-top: 10px;
+  margin-top: 0px;
   text-align: center;
 }
-/* line 610, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
+/* line 608, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
 .blog .publish-bar-tags-icon {
   margin-left: 20px;
   margin-right: 10px;
 }
-/* line 616, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
+/* line 614, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
 .blog .publish-bar-tags-input {
   flex: 1 1 auto;
   align-self: auto;
   position: relative;
-  height: 40px;
+  height: 30px;
   white-space: normal;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-/* line 624, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
+/* line 622, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
 .blog .publish-bar-tags-input .blog-tags-input {
   width: 100%;
   line-height: 25px;
   border: none;
-  margin-top: 6px;
 }
-/* line 630, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
+/* line 628, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
 .blog .publish-bar-tags-input .selectize-control {
   height: 100%;
 }
-/* line 633, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
+/* line 631, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
 .blog .publish-bar-tags-input .selectize-input {
-  margin-top: 5px;
   line-height: 30px;
 }
-/* line 654, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
+/* line 652, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
 .blog .dropup {
   background: #E88012;
   border-radius: 2px;
-  right: 60px;
+  right: 50px;
   width: 50px;
   height: 28px;
   margin-bottom: 7px;
 }
-/* line 661, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
+/* line 659, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
 .blog .dropup button {
   width: 50px;
   height: 28px;
   margin-top: 0px;
 }
-/* line 665, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
+/* line 663, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
 .blog .dropup button span {
   color: #fff;
   font-size: 12px;
 }
-/* line 670, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
+/* line 668, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
 .blog .dropup .dropdown-menu {
   width: 50px;
   min-width: 50px;
 }
-/* line 674, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
+/* line 672, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
 .blog .dropup .dropdown-menu .active a {
   background-color: #ccc;
   color: #333;
 }
-/* line 679, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
+/* line 677, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
 .blog .dropup .dropdown-menu li {
   width: 50px;
 }
-/* line 681, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
+/* line 679, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
 .blog .dropup .dropdown-menu li:hover {
   background-color: #ACC1CC;
 }
-/* line 684, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
+/* line 682, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
 .blog .dropup .dropdown-menu li a {
   padding: 3px 8px;
 }
-/* line 691, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
+/* line 689, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
 .blog .publish-bar-actions {
   flex: 0 1 auto;
   align-self: auto;
@@ -1698,23 +1695,24 @@ body.right-outlet-expanded .blog .right-outlet {
   text-align: right;
   color: #000;
 }
-/* line 698, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
+/* line 696, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
 .blog .publish-bar-actions .btn {
-  right: 90px;
+  right: 80px;
   margin-top: 5px;
   padding: 5px;
   width: 50px;
 }
-/* line 705, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
+/* line 703, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
 .blog .publish-bar-actions .backBtn {
-  right: 110px;
+  right: 95px;
 }
-/* line 708, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
+/* line 707, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
 .blog .publish-bar-actions .checkbox {
   float: left;
   margin: 0;
   padding: 4px 0 5px 10px;
-  right: 20px;
+  right: 10px;
+  color: #444;
 }
 /* line 720, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/ghost/layouts/_editor.scss */
 .blog body.right-outlet-expanded .editor-cover {
@@ -2497,10 +2495,17 @@ body.right-outlet-expanded .blog .right-outlet {
   border-bottom: 1px solid #EBEBEB;
 }
 /* line 76, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/_list.scss */
+.blog .posts-list .post-item .title {
+  word-wrap: normal;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* line 82, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/_list.scss */
 .blog .posts-list .post-item:hover {
   background: #eee;
 }
-/* line 79, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/_list.scss */
+/* line 85, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/_list.scss */
 .blog .posts-list .post-item:active {
   background: #eee;
 }
@@ -2527,12 +2532,17 @@ body.right-outlet-expanded .blog .right-outlet {
 .blog .preview .oprate.btn-group-vertical a:hover {
   opacity: .6;
 }
-/* line 24, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/_preview.scss */
+/* line 23, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/_preview.scss */
 .blog .preview .post-wrapper {
   padding-top: 30px;
   word-break: break-all;
 }
-/* line 29, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/_preview.scss */
+/* line 28, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/_preview.scss */
+.blog .preview .article-opts-wrap .link-item {
+  padding-left: 12px;
+  padding-top: 7px;
+}
+/* line 33, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/_preview.scss */
 .blog .preview ul.pagination {
   list-style: none;
   margin: 0;
@@ -2543,7 +2553,7 @@ body.right-outlet-expanded .blog .right-outlet {
   position: fixed;
   display: none;
 }
-/* line 37, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/_preview.scss */
+/* line 40, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/_preview.scss */
 .blog .preview ul.pagination li {
   list-style: none;
   margin: 0;
@@ -2553,12 +2563,12 @@ body.right-outlet-expanded .blog .right-outlet {
   background: #bbb;
   z-index: 1000;
 }
-/* line 44, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/_preview.scss */
+/* line 47, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/_preview.scss */
 .blog .preview ul.pagination li.prev {
   float: left;
   left: 20px;
 }
-/* line 48, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/_preview.scss */
+/* line 51, E:/uZone/dev/center/src/products/ihudao.com/contents/1.0.0/Blog/src/resources/stylesheets/sass/_preview.scss */
 .blog .preview ul.pagination li.next {
   float: right;
   right: 20px;

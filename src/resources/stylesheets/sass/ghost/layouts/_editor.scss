@@ -597,13 +597,11 @@ body.zen {
 .selectize-control.multi .selectize-input > div {
     padding: 0;
     margin: 0 2px;
-    ;
     background: #1da7ee !important;
     color: #ffffff;
     border: 1px solid #0073bb;
-    width: 50px;
     height: 28px;
-    margin-top: 10px;
+    margin-top: 0px;
     text-align: center;
 }
 
@@ -617,7 +615,7 @@ body.zen {
     flex: 1 1 auto;
     align-self: auto;
     position: relative;
-    height: 40px;
+    height: 30px;
     white-space: normal;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -625,13 +623,13 @@ body.zen {
         width: 100%;
         line-height: 25px;
         border: none;
-        margin-top: 6px;
+        // margin-top: 6px;
     }
     .selectize-control {
         height: 100%;
     }
     .selectize-input {
-        margin-top: 5px;
+        // margin-top: 5px;
         line-height: 30px;
     }
     // .tag-input{
@@ -654,7 +652,7 @@ body.zen {
 .dropup {
     background: #E88012;
     border-radius: 2px;
-    right: 60px;
+    right: 50px;
     width: 50px;
     height: 28px;
     margin-bottom: 7px;
@@ -696,20 +694,22 @@ body.zen {
     text-align: right;
     color: #000;
     .btn {
-        right: 90px;
+        right: 80px;
         margin-top: 5px;
         // margin-bottom: 0;
         padding: 5px;
         width: 50px;
     }
     .backBtn {
-        right: 110px;
+        right: 95px;
     }
+    $blogcolor:#444;
     .checkbox {
         float: left;
         margin: 0;
         padding: 4px 0 5px 10px;
-        right: 20px;
+        right: 10px;
+        color: $blogcolor;
     }
 }
 

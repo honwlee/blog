@@ -7,25 +7,29 @@
         position: absolute;
         font-size: 28px;
         z-index: 101;
-        &.btn-group-vertical{
+        &.btn-group-vertical {
             box-shadow: none;
-            a{
+            a {
                 font-size: 16px;
-                padding:10px 15px;
+                padding: 10px 15px;
                 width: 40px;
                 display: block;
-                &:hover{
+                &:hover {
                     opacity: .6;
                 }
             }
         }
     }
-
-    .post-wrapper{
-       padding-top:30px;
-       word-break: break-all;
+    .post-wrapper {
+        padding-top: 30px;
+        word-break: break-all;
     }
-
+    .article-opts-wrap {
+        .link-item {
+            padding-left: 12px;
+            padding-top: 7px;
+        }
+    }
     ul.pagination {
         @include ul-style;
         height: 30px;
@@ -33,7 +37,6 @@
         top: 160px;
         position: fixed;
         display: none;
-
         li {
             @include li-style;
             width: 50px;
