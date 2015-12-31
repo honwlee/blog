@@ -655,8 +655,8 @@ body.zen {
     right: 50px;
     width: 50px;
     height: 28px;
-    margin-bottom: 7px;
-    button {
+    margin-bottom: 6px;
+    .dropdown-toggle {
         width: 50px;
         height: 28px;
         margin-top: 0px;
@@ -692,7 +692,6 @@ body.zen {
     min-width: 300px;
     height: 100%;
     text-align: right;
-    color: #000;
     .btn {
         right: 80px;
         margin-top: 5px;
@@ -703,13 +702,12 @@ body.zen {
     .backBtn {
         right: 95px;
     }
-    $blogcolor:#444;
     .checkbox {
         float: left;
         margin: 0;
         padding: 4px 0 5px 10px;
         right: 10px;
-        color: $blogcolor;
+        color: $textColor;
     }
 }
 
